@@ -232,7 +232,7 @@ and our administrator may contact you if we need any extra information.</h4>
 {% endcomment %}
 {% if page.collaborative_notes %}
 <p id="collaborative_notes">
-  We will use this <a href="{{page.collaborative_notes}}">collaborative document</a> for chatting, taking notes, and sharing URLs and bits of code.
+  We will use <a href="{{page.collaborative_notes}}">etherpad</a> for chatting, taking notes, and sharing URLs and bits of code.
 </p>
 {% endif %}
 
@@ -255,6 +255,8 @@ and our administrator may contact you if we need any extra information.</h4>
   please preview your site before committing, and make sure to run
   'tools/check' as well.
 {% endcomment %}
+
+<!--
 <h2 id="syllabus">Syllabus</h2>
 
 {% if page.carpentry == "swc" %}
@@ -266,6 +268,7 @@ and our administrator may contact you if we need any extra information.</h4>
 {% endif %}
 
 <hr/>
+-->
 
 {% comment %}
   SETUP
@@ -485,7 +488,16 @@ and our administrator may contact you if we need any extra information.</h4>
         <a href="http://www.sublimetext.com/">Sublime Text</a>.
         <strong>Be aware that you must
           add its installation directory to your system path.</strong>
-        Please ask your instructor to help you do this.
+        To add Notepad++ to the path:
+          1) Open Git-Bash from the start menu.
+          2) Type: cd [enter] to make sure you are in your home directory.
+          3) Type: notepad .bashrc [enter]. This will create .bashrc file in Notepad.
+             Add the following text to the file:<br>
+             <span style="font-size:9px"> export PATH=$PATH:"C:\Program Files (x86)\Notepad++" <br>
+             alias npp=notepad++</span><br>
+          4) Save the file and exit Notepad.
+          5) Open a new Git-Bash window. You should now be able to launch Notepad++ by typing: npp [enter].
+          If you run into trouble please ask your instructor to help you with this.
       </p>
     </div>
     <div class="col-md-4">
@@ -611,6 +623,8 @@ and our administrator may contact you if we need any extra information.</h4>
 {% endcomment %}
 </div> {% comment %} End of 'Python' section. {% endcomment %}
 
+
+<!--
 <div id="r"> {% comment %} Start of 'R' section. {% endcomment %}
   <h3>R</h3>
 
@@ -754,6 +768,8 @@ and our administrator may contact you if we need any extra information.</h4>
     </div>
   </div>
 </div> {% comment %} End of 'OpenRefine' section. {% endcomment %}
+
+-->
 
 {% comment %}
 <div id="vm">
