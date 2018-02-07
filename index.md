@@ -239,6 +239,7 @@ and our administrator may contact you if we need any extra information.</h4>
 
 <hr/>
 
+<!--
 {% comment %}
   SYLLABUS
 
@@ -257,7 +258,7 @@ and our administrator may contact you if we need any extra information.</h4>
   'tools/check' as well.
 {% endcomment %}
 
-<!--
+
 <h2 id="syllabus">Syllabus</h2>
 
 {% if page.carpentry == "swc" %}
@@ -269,6 +270,7 @@ and our administrator may contact you if we need any extra information.</h4>
 {% endif %}
 
 <hr/>
+
 -->
 
 {% comment %}
