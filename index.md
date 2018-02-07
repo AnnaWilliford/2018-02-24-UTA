@@ -198,6 +198,7 @@ and our administrator may contact you if we need any extra information.</h4>
 <h2 id="schedule">Schedule</h2>
 
 {% comment %} DO NOT EDIT SURVEY LINKS {% endcomment %}
+<!--
 <p><em>Surveys</em></p>
 {% if page.carpentry == "swc" %} 
 <p>Please be sure to complete these surveys before and after the workshop.</p>
@@ -210,7 +211,7 @@ and our administrator may contact you if we need any extra information.</h4>
 {% elsif page.carpentry == "lc" %}
 <p>Ask your instructor about pre- and post-workshop Survey details.</p>
 {% endif %}
-
+-->
 
 {% if page.carpentry == "swc" %}
   {% include sc/schedule.html %}
