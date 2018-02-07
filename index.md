@@ -239,7 +239,7 @@ and our administrator may contact you if we need any extra information.</h4>
 
 <hr/>
 
-<!--
+
 {% comment %}
   SYLLABUS
 
@@ -256,7 +256,7 @@ and our administrator may contact you if we need any extra information.</h4>
   This is one of the places where people frequently make mistakes, so
   please preview your site before committing, and make sure to run
   'tools/check' as well.
-{% endcomment %}
+
 
 
 <h2 id="syllabus">Syllabus</h2>
@@ -271,7 +271,7 @@ and our administrator may contact you if we need any extra information.</h4>
 
 <hr/>
 
--->
+{% endcomment %}
 
 {% comment %}
   SETUP
