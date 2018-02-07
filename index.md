@@ -149,6 +149,8 @@ and our administrator may contact you if we need any extra information.</h4>
   <li>The room is wheelchair / scooter accessible.</li>
   <li>Accessible restrooms are available.</li>
 </ul>
+
+<!-- 
 <p>
   Materials will be provided in advance of the workshop and
   large-print handouts are available if needed by notifying the
@@ -157,6 +159,7 @@ and our administrator may contact you if we need any extra information.</h4>
   get in touch (using contact details below) and we will
   attempt to provide them.
 </p>
+-->
 
 {% comment %}
   CONTACT EMAIL ADDRESS
