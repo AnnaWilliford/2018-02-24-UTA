@@ -345,10 +345,16 @@ and our administrator may contact you if we need any extra information.</h4>
                 Keep "Checkout Windows-style, commit Unix-style line endings" selected and click on "Next".
               </strong>
             </li>
+			{% comment %} Configure default editor for Git {% endcomment %}
+			<li>
+              <strong>
+                Check "Choose Notepad++ as Git's default editor" and click on "Next".
+              </strong>
+            </li>
             {% comment %} Configuring the terminal emulator to use with Git Bash {% endcomment %}
             <li>
               <strong>
-                Keep "Use Windows' default console window" selected and click on "Next".
+                Check "Use Windows' default console window" selected and click on "Next".
               </strong>
             </li>
             {% comment %} Configuring experimental performance tweaks {% endcomment %}
@@ -358,6 +364,7 @@ and our administrator may contact you if we need any extra information.</h4>
             <li>Click on "Finish".</li>
           </ol>
         </li>
+		{% comment %}
         <li>
           If your "HOME" environment variable is not set (or you don't know what this is):
           <ol>
@@ -370,6 +377,7 @@ and our administrator may contact you if we need any extra information.</h4>
             <li>Quit command prompt by typing <code>exit</code> then pressing [Enter]</li>
           </ol>
         </li>
+		{% endcomment %}
       </ol>
       <p>This will provide you with both Git and Bash in the Git Bash program.</p>
     </div>
