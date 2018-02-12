@@ -480,7 +480,7 @@ and our administrator may contact you if we need any extra information.</h4>
       <h4 id="editor-windows">Windows</h4>
       {% comment %}<a href="https://www.youtube.com/watch?v=339AEqk9c-8">Video Tutorial</a>{% endcomment %}
       <p>
-        We recommend to have two text editors ready for this workshop: 
+        We recommend to have two text editors ready for this workshop: <br>
 		1. <strong> nano </strong> is a basic editor for Unix-like operating systems that does not require graphical user interface.
         To install it,
         download the <a href="{{site.swc_installer}}">
@@ -517,28 +517,31 @@ and our administrator may contact you if we need any extra information.</h4>
     <div class="col-md-4">
       <h4 id="editor-macosx">macOS</h4>
       <p>
-        <strong> nano </strong> is a basic editor for Unix-like operating systems that does not require graphical user interface.
+	    We recommend to have two text editors ready for this workshop: <br>
+        1. <strong> nano </strong> is a basic editor for Unix-like operating systems that does not require graphical user interface.
         See the Git installation <a href="https://www.youtube.com/watch?v=9LQhwETCdwY ">video tutorial</a>
         for an example on how to open nano.
         It should be pre-installed.
       </p>
       <p>
-        Others editors that you can use are
-        <a href="http://www.barebones.com/products/textwrangler/">Text Wrangler</a> or
-        <a href="http://www.sublimetext.com/">Sublime Text</a>.
+        {% comment %}Others editors that you can use are {% endcomment %}
+        2. <a href="http://www.barebones.com/products/textwrangler/">Text Wrangler</a> 
+        {% comment %} <a href="http://www.sublimetext.com/">Sublime Text</a>. {% endcomment %}
       </p>
     </div>
     <div class="col-md-4">
       <h4 id="editor-linux">Linux</h4>
       <p>
-        nano is a basic editor and the default that instructors use in the workshop.
+	    We recommend to have two text editors ready for this workshop: <br>
+        1. <strong> nano </strong> is a basic editor for Unix-like operating systems that does not require graphical user interface.
         It should be pre-installed.
       </p>
       <p>
-        Others editors that you can use are
-        <a href="https://wiki.gnome.org/Apps/Gedit">Gedit</a>,
+        2. <a href="https://wiki.gnome.org/Apps/Gedit">Gedit</a>
+		{% comment %}
         <a href="http://kate-editor.org/">Kate</a> or
         <a href="http://www.sublimetext.com/">Sublime Text</a>.
+		{% endcomment %}
       </p>
     </div>
   </div>
