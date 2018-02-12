@@ -438,7 +438,7 @@ and our administrator may contact you if we need any extra information.</h4>
     </div>
     <div class="col-md-4">
       <h4 id="git-macosx">macOS</h4>
-      <a href="https://www.youtube.com/watch?v=9LQhwETCdwY ">Video Tutorial</a>
+      {% comment %}<a href="https://www.youtube.com/watch?v=9LQhwETCdwY ">Video Tutorial</a>{% endcomment %}
       <p>
         <strong>For OS X 10.9 and higher</strong>, install Git for Mac
         by downloading and running the most recent "mavericks" installer from
@@ -478,7 +478,7 @@ and our administrator may contact you if we need any extra information.</h4>
   <div class="row">
     <div class="col-md-4">
       <h4 id="editor-windows">Windows</h4>
-      <a href="https://www.youtube.com/watch?v=339AEqk9c-8">Video Tutorial</a>
+      {% comment %}<a href="https://www.youtube.com/watch?v=339AEqk9c-8">Video Tutorial</a>{% endcomment %}
       <p>
         nano is a basic editor and the default that instructors use in the workshop.
         To install it,
@@ -577,7 +577,7 @@ and our administrator may contact you if we need any extra information.</h4>
   <div class="row">
     <div class="col-md-4">
       <h4 id="python-windows">Windows</h4>
-      <a href="https://www.youtube.com/watch?v=xxQ0mzZ8UvA">Video Tutorial</a>
+      {% comment %} <a href="https://www.youtube.com/watch?v=xxQ0mzZ8UvA">Video Tutorial</a> {% endcomment %}
       <ol>
         <li>Open <a href="https://www.anaconda.com/download/#windows">https://www.anaconda.com/download/#windows</a> with your web browser.</li>
         <li>Download the Python 3 installer for Windows.</li>
@@ -586,7 +586,7 @@ and our administrator may contact you if we need any extra information.</h4>
     </div>
     <div class="col-md-4">
       <h4 id="python-macosx">macOS</h4>
-      <a href="https://www.youtube.com/watch?v=TcSAln46u9U">Video Tutorial</a>
+      {% comment %} <a href="https://www.youtube.com/watch?v=TcSAln46u9U">Video Tutorial</a> {% endcomment %}
       <ol>
         <li>Open <a href="https://www.anaconda.com/download/#macos">https://www.anaconda.com/download/#macos</a> with your web browser.</li>
         <li>Download the Python 3 installer for OS X.</li>
