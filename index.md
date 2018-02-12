@@ -498,7 +498,7 @@ and our administrator may contact you if we need any extra information.</h4>
       </p>
       <p>
          
-        2. <a href="http://notepad-plus-plus.org/">Notepad++</a>
+        2. <a href="http://notepad-plus-plus.org/">Notepad++</a> <br>
         {% comment %}  <a href="http://www.sublimetext.com/">Sublime Text</a>. {% endcomment %}
         <strong>Be aware that you must
           add its installation directory to your system path.</strong>
