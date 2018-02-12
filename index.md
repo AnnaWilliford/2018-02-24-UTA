@@ -480,7 +480,8 @@ and our administrator may contact you if we need any extra information.</h4>
       <h4 id="editor-windows">Windows</h4>
       {% comment %}<a href="https://www.youtube.com/watch?v=339AEqk9c-8">Video Tutorial</a>{% endcomment %}
       <p>
-        nano is a basic editor and the default that instructors use in the workshop.
+        We recommend to have two text editors ready for this workshop: 
+		1. <strong> nano </strong> is a basic editor for Unix-like operating systems that does not require graphical user interface.
         To install it,
         download the <a href="{{site.swc_installer}}">
           {% if page.carpentry == "swc" %}
@@ -496,9 +497,9 @@ and our administrator may contact you if we need any extra information.</h4>
         <strong>This installer requires an active internet connection.</strong>
       </p>
       <p>
-        Others editors that you can use are
-        <a href="http://notepad-plus-plus.org/">Notepad++</a> or
-        <a href="http://www.sublimetext.com/">Sublime Text</a>.
+         
+        2. <a href="http://notepad-plus-plus.org/">Notepad++</a>
+        {% comment %}  <a href="http://www.sublimetext.com/">Sublime Text</a>. {% endcomment %}
         <strong>Be aware that you must
           add its installation directory to your system path.</strong>
         To add Notepad++ to the path:
@@ -516,7 +517,7 @@ and our administrator may contact you if we need any extra information.</h4>
     <div class="col-md-4">
       <h4 id="editor-macosx">macOS</h4>
       <p>
-        nano is a basic editor and the default that instructors use in the workshop.
+        <strong> nano </strong> is a basic editor for Unix-like operating systems that does not require graphical user interface.
         See the Git installation <a href="https://www.youtube.com/watch?v=9LQhwETCdwY ">video tutorial</a>
         for an example on how to open nano.
         It should be pre-installed.
