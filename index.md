@@ -509,6 +509,7 @@ and our administrator may contact you if we need any extra information.</h4>
              Add the following text to the file:<br>
              <span style="font-size:9px"> export PATH=$PATH:"C:\Program Files (x86)\Notepad++" <br>
              alias npp=notepad++</span><br>
+			 Note: if Notepad++ is installed in `Program Files` folder, use: export PATH=$PATH:"C:\Program Files\Notepad++" <br>
           4) Save the file and exit Notepad.
           5) Open a new Git-Bash window. You should now be able to launch Notepad++ by typing: npp [enter].
           If you run into trouble please ask your instructor to help you with this.
