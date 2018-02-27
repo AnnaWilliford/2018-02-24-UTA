@@ -37,6 +37,18 @@ eventbrite: "42956470961"          # optional: alphanumeric key for Eventbrite r
   are not using Eventbrite, or leave it in, since it will not be
   displayed if the 'eventbrite' field in the header is not set.
 {% endcomment %}
+
+### Thank you for attending the workshop!
+
+We hope these records from the workshop will encourage you to learn more about Python, Linux and Git/GitHub!
+<p> 
+<strong>Lessons:</strong>  <a href="https://github.com/AnnaWilliford/SWC_Spring2018_lessons"> View workshop lessons </a>
+<strong>Etherpad:</strong> <a href="Workshop/etherpad_notes.txt"> etherpad notes</a>, <a href="Workshop/etherpad_chat.txt"> etherpad chat</a>
+</p>
+
+
+
+{% comment %}
 {% if page.eventbrite %}
 <iframe
   src="https://www.eventbrite.com/tickets-external?eid={{page.eventbrite}}&ref=etckt"
@@ -46,7 +58,7 @@ eventbrite: "42956470961"          # optional: alphanumeric key for Eventbrite r
   scrolling="auto">
 </iframe>
 {% endif %}
-
+{% endcomment %}
 {% comment %}
 <h4>This is the workshop template. Delete these lines and use it to customize your own website.
 If you are running a self-organized workshop or have not put in a workshop request yet, please also fill in 
@@ -200,9 +212,6 @@ and our administrator may contact you if we need any extra information.</h4>
 
 
 <h2 id="schedule">Schedule</h2>
-<p> 
-<strong>Lessons:</strong>  <a href="https://github.com/AnnaWilliford/SWC_Spring2018_lessons"> View workshop lessons </a>
-</p>
 
 
 
@@ -243,7 +252,6 @@ and our administrator may contact you if we need any extra information.</h4>
 {% if page.collaborative_notes %}
 <p id="collaborative_notes">
   We will use <a href="{{page.collaborative_notes}}">etherpad</a> for chatting, taking notes, and sharing URLs and bits of code.<br>
-  Saved latest version of Etherpad (after the workshop): <a href="Workshop/etherpad_notes.txt"> etherpad notes</a>, <a href="Workshop/etherpad_chat.txt"> etherpad chat</a>
 </p>
 {% endif %}
 
