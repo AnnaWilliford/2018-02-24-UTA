@@ -1,0 +1,544 @@
+ Welcome to Software Carpentry Etherpad!
+
+
+This pad is synchronized as you type, so that everyone viewing this page sees the same text. This allows you to collaborate seamlessly on documents.
+################################################################################################
+################################################################################################
+################################################################################################
+
+Welcome to Software Carpentry Workshop!
+
+Please have workshop website open:
+
+https://annawilliford.github.io/2018-02-24-UTA/
+
+Follow the link to etherpad provided under Schedule section ( to this page) - everything we type here is visible to all participants of the workshop
+
+Please make sure that the following steps are  completed: If you have problems, put up a red sticky note, one of our helpers will come help you.
+
+1. If you are off-campus guest: Register your vehicle:
+To register your vehicle, please go to: https://uta.nupark.com/events/Events/Register/2a220cb4-fdbc-463c-b735-cfbfe49c0fa5 
+
+2. Make sure you have connection to internet:tut
+    For our off-campus guests:
+    
+    NetID / Username: evt-biol
+    Password - Spring2018
+
+    
+    You may access the UTA wireless network by connecting
+to "UTA Auto Login using the above credentials.
+If this does not work, please try connecting to “UTA Web Login” 
+with the network key - UTAsecret. Users will then have to open
+a web browser to authenticate through the welcome page with the
+event account NetID username and password and click Submit.   
+
+3. Make sure Git and Anaconda are installed
+Follow instructions under Setup section of the workshop website
+
+4. Fill out the survey: https://www.surveymonkey.com/r/swc_pre_workshop_v1?workshop_id=2018-02-24-UTA
+
+###########################################################################################################
+###########################################################################################################
+###########################################################################################################
+
+
+### This space if for taking any notes you want to for this workshop. It is best to work together and do this as a class.
+
+
+##Issues/Solutions:
+    
+    
+If you are receiving errors when entering 'npp' to git-bash, please try the following:
+    
+1. Open git-bash
+2. Type in: notepad .bash_profile [ENTER]
+3. Paste: if [ -f ~/.bashrc ]; then . ~/.bashrc; fi
+4. Save file and re-open git-bash
+
+
+#############################################
+Day 1, Morning: Python Basics
+#############################################
+
+
+My lessons: https://github.com/rameshbalan/SWC_spring2018/blob/master/Python_Basics.ipynb
+If you want to follow along with the commands as they are issued, keep the above link open in your web-browser. You will have to occassionally refresh to view changes.
+
+The data we will be working with for this workshop
+Dataset:
+        https://raw.githubusercontent.com/AnnaWilliford/2017-11-11-UTA/gh-pages/workshop/SWC_fall2017/Data.zip
+
+1. Download the data and unzip it into a directory on your Desktop called 'SWC_spring2018'
+2. Also within SWC_spring2018, create a directory called 'Python_basics'
+3. Copy the 'gapminder.txt' file from 'Data' into 'Python_basics'
+
+Your directory should look something like this (where indenting indicates hierarchical file structure):
+Desktop
+	SWC_spring2018
+		Data
+			gapminder.txt
+			ByCountry/
+		Python_basics
+			gapminder.txt
+
+import math
+ # we are importing a module, a module is a collection of functions. Here we are importing the functions 
+#that live in the "math" module, these are functions that allow us to use the mathematical operations such as
+# factorials, square roots, integrals, derivatives and such
+
+help(math) # the "help()" funciton allows us to see all of the functions that are in the "math" module.
+
+# The way that we "call" the function for use,is by typing "math", a period, and then the deisred function
+# for example math.sqrt()
+# we type what we want to take the square root of inside of the parenthesis
+math.sqrt(64) this returns 8
+
+
+Challenge 2.1 What will be the value of each variable after each statement in the following code?
+mass = 47.5
+height = 24.5
+age = 122
+mass = mass * 2.3
+age = age - 20
+height = height + 20    
+
+height= 44.5
+
+Mr. Robot: 
+		* mass 109.24999999999999, age 102, height 44.5
+
+mass 109.24999999999999 height 44.5 age 102mass 109.24999999999999
+
+mass = 109.24999999999999
+age = 102
+''' 
+this is a multiline comment
+'''
+
+"""
+this is also a multiline comment
+"""
+
+When naming a new variable, do not use spaces and do not put numbers at the beginning of the name.
+The command "who" gives all of the variables declared so far, and their current values
+Use del() to delete a particular variable
+Use "reset" to delete all variables.
+
+functions: print(), help(), type(), str(), int(), float(), pandas.DataFrame(), pandas.read_table()
+commands: reset, who
+
+data types: float (e.g. 23.0), integer (e.g. 23), string (e.g. "Hello!")
+another data type:
+list = [value1, value2, value3]
+
+python index begins from 0, not 1  <<--- THIS IS SUPER IMPORTANT! This varies between languages. R, for example, is 1 indexed.
+# list is an ordered sequence of objects.
+# indexing starts from zero
+# list are mutable
+
+# tuples are immutable, meaning the elements of a tuple cannot be changed without creating a new tuple
+# tuples are the same as lists except tuples are immutable
+
+# Dictionary is an unordered sequence of objects
+# Dicionary contains key:value pair.
+
+Also, do not name your variables with words already used in python, eg naming a dictionary "dict" is  BAD IDEA, same with naming a tuple "tuple" or a list "list"
+
+.iloc() = integer based position indexing    # is it *.iloc() or *.iloc[] ? ## nvm, it is *.iloc[]
+
+does that ^ have to be called using "pandas.iloc()" or do you use "mydataframe.iloc()"?
+OK, it says on the projector that you use "mydataframe.iloc()" where mydataframe is the dataframe object that you created.
+
+### For tab separated file
+my_file = pd.read_table("gapminder.txt")
+Similar to tab-separated file, you can use comma separated file as well as excel file.
+### For comma separated file
+my_file = pd.read_csv("gapminder.csv")
+### For excel file
+my_file = pd.read_excel("gapminder.xlsx")
+Subsetting Dataframes
+Now lets look at the top few lines and last few lines in the df.
+### Read in the first 10 lines of data frame
+file_dataframe = my_file.head(10)
+### Read in the last 10 lines of data frame
+file_dataframe = my_file.tail(10)
+# For a specific row, column - Here in this case, the subset is a seriesprint(dataframe.iloc[row,column])
+# For a set of rows and for a set of columns - Here its a dataframeprint(dataframe.iloc[[<row selection>],[<column selection>]])
+Now, let us subset our gapminder dataset using iloc to understand its functionality better.
+If you want to the first row and third column, we would subset using iloc as follows.
+print(my_file.iloc[0,2])  #first row, third column
+
+There are three main options to achieve the selection and indexing activities in Pandas. They are:
+	1. Selecting data by indexing (.iloc)
+	1. Selecting data by label(.loc)
+	1. Selecting data by a conditional statment/logical statements
+
+
+Challenge 3.1 Play with gapminder dataset:
+    
+TASK: Answer the following questions about myData object
+1. Can you extract 3rd and 5th column of the dataset?
+2. Can you extract the list of countries in this dataset?
+### Hint: use unique(). ###
+3. Can you get a part of this dataset that includes information about Sweden?
+4. Can you extract all countries for which life expectancy is below 70?
+5. Can you make a new column that contains population in units of millions of people?
+#LinuxFTW
+#This is LifeExpPlot.py  
+# Importing packages 
+import pandas as pd 
+import matplotlib.pyplot as plt  
+#Reading file my_file = pd.read_table("/Users/balan/Desktop/SWC_spring2018/Data/gapminder.txt")  
+#Subsetting  Canada = my_file.loc[my_file['country']=="Canada", :] 
+# Plotting 
+Canada.plot.line(x="year",y="lifeExp", label = "Life Expectancy", figsize=(8,6)) plt.suptitle("Life Expectancy in Canada over the years", fontsize = 20)
+plt.xlabel("Year", fontsize = 16) 
+plt.ylabel("Life Expectancy", fontsize = 16) 
+plt.savefig("PlotLifeExp.png")
+
+Challenge 3.2 Write your own python script Write a script to calculate mean gdpPerCap for African and European countries. Try to make a barplot to display your results.
+You might need to read help for ‘mean’ and ‘plot’ functions .mean() plt.bar() 
+
+unique() is part of pandas module
+
+
+
+
+#############################################
+Day 1, Afternoon: Introduction to Bash Shell
+#############################################
+Adnan:
+Remember, we made a `SWC_spring2018` folder in the beginning of workshop and moved our `Data` folder there. Can you now list files in SWC_spring2018 directory from your current directory?
+
+Next we will work with files from the `Data` folder that you moved to `SWC_spring2018` folder in the beginning of this workshop. Please move `Data` folder to unix_shell folder. We will keep all the files for Linux lesson in the `unix_shell` folder from now on. Make sure you understand the directory structure of SWC_spring2018 before we continue.
+
+Link to automatically-updating history of commands issued by instructor. Refresh web-page regularly to view changes.
+Dropbox Link: https://www.dropbox.com/s/11damf5gwzaq1x2/linux.txt?dl=0
+
+
+https://www.dropbox.com/s/axb4n7b2zwix1ob/SWC_spring2018_linux2.txt?dl=0
+
+LINK TO BASH HISTORY:
+    https://pastebin.com/fxu5acgy
+
+Remove color from ls:
+    alias ls='ls --color=none'
+    
+Change $ user@dir color:
+       export PS1='\[\033[1;37m\]\u@\h:\[\033[0m\]\[\033[1;37m\]\w\[\033[0m\] \[\033[1;37m\]'
+
+Paste the above command in ~/.bashrc
+
+Farah:
+
+https://www.dropbox.com/s/axb4n7b2zwi018_linux2.txt?dl=0
+
+CHALLANGE 4
+What country had the highest “LifeExp” in 2002?
+Use gapminder.txt as an input file and generate Country_HighestLifeExp.txt as your ONLY output file.
+Hint: you can accomplish this by using grep, cut, sort and tail but you might want to look up help pages for some of these commands.
+
+Clue: If you need to cut more than one columns, you can use cut -f1,2,3,4,5,6, etc. Use number of columns seperated by comma after -f1
+
+Solution to challenge 4: 
+    
+    Solution: first step by step and then as a pipe
+
+# 1. select all columns of interest - "Country", "Year", and "lifeExp.
+cut -f1,3,4 gapminder.txt > LifeExp_All.txt
+#2. get data for 2012 onlygrep 2002 LifeExp_All.txt > LifeExp_2002.txt
+#3. sort by 3rd column from min to max sort -n -k3 LifeExp_2002.txt > LifeExp_2002_Sorted.txt
+#4. select country with highest mortality rate
+tail -n 1 LifeExp_2002_Sorted.txt > CountryHighestLifeExp.txt
+
+#Or as a pipe:cut -f1,3,4 gapminder.txt | grep 2002 | sort -n -k3 | tail -n 1 > CountryHighestLifeExp.txt
+# is there any way to do this command ^ such that the column headers are kept in place?
+cut -f1,3,4 gapminder.txt | grep -v "lifeExp",2002 | sort -rk3 | head -n 2 > CountryHighestLifeExp.txt
+
+
+###Loops# for loop syntax:
+    for variable in list; do action $variable; done
+    #command-line `for` loops can be run on a single line 
+    $ for variable in list; do action $variable; done
+    #A simple for loop command
+    for file in *.txt; do echo "mv $file 02-24-18_$file"; done
+    
+    # What does it show you?
+    
+    Let’s try to extract the third column of every .txt file in ByCountry folder and record the output to corresponding output files that begin with ‘Col3_’. For example, the output for `Canada_data.txt` should be stored in `Col3_Canada_data.txt`. 
+    Let’s move to the ByCountry folder.
+$ for file in *.txt; do cut -f3 $file > Col3_$file; done
+
+Bash scripts:
+If you want to reuse commands, to do something similar on another file, you can save the commands to a file and run that file so that you can easily reuse/modify them later. Such collection of commands in the order you want them to be executed is a simple shell script.
+
+Let's paste this command in  text editor  and save it as MyFirstScript.sh
+
+cut -f1,3,4 Data/gapminder.txt | grep 2002 | sort -n -k3 | tail -n 1 > CountryHighestLifeExp.txt
+
+1. You have just created MyFirstScript.sh. Let’s view and modify it slightly: npp MyFirstScript.sh (for windows) or edit MyFirstScript.sh (for mac)
+
+Add path to bash shell that will execute your code; so the following should be your first line of the script: 
+#!/bin/bash
+	* Add description of what script does.
+#this script records a country with highest life expectancy or population or gdp in any year among countries in gapminder.txt to a user-defined output
+	* Add usage statement: 
+#usage: scriptname.sh
+
+./ indicates that you are running script from working directory. So this script should be in the directory where Data directory is. ./MyFirstScript.sh
+
+So this is how MyFirstScript.sh it should look:
+#!/bin/bash
+
+#this script finds What country had the highest "LifeExp" in 2002 in gapminder.txt
+#usage: ./MyFirstScript.sh
+
+cut -f1,3,4 Data/gapminder.txt | grep 2002 | sort -n -k3 | tail -n 1 > CountryHighestLifeExp.txt
+
+MyFirstScript_2.sh:
+#!/bin/bash
+
+#this script records a country with highest life expectancy in 2002 among countries in gapminder.txt
+#usage: script.sh
+#usage: ./MyFirstScript_2.sh (using this command you run it from the terminal)
+
+input=Data/gapminder.txt
+
+cut -f1,3,4 $input | grep 2002 | sort -n -k3 | tail -n 1 > CountryHighestLifeExp_2.txt    
+ 
+ When you are defining the input file, it will only work on that file.
+ 
+ What if you want to get the highest life expectancy from some other file?
+ You can use variables. 
+ Variables in bash:
+Varible name: myName; the value assigned to it: the Name
+#try this
+$ myName=James  #variable assignment
+$ echo James  
+$ echo myName
+$ echo $myName  # command needs a `$` to return the value of the variable
+Now let's use a variable for the input file name.
+ 
+ MyFirstScript_3.sh:
+
+#!/bin/bash
+
+#this script records a country with highest life expectancy in 2002 among countries in gapminder.txt
+
+#usage: ./MyFirstScript_3.sh or sh MyfirstScript_3.sh input file name
+
+input=$1  #special variable that stores the the first argument from the command line
+
+cut -f1,3,4 $input | grep 2002 | sort -n -k3 | tail -n 1 > CountryHighestLifeExp_3.txt
+
+How can we make it more flexible?
+To make it flexible we need to inroduce a variable for a part of the code that we want to change frequently. For example, if we want to run this code with a different file, we want a variable instead of hard-wired filename; a variable can take any user-defined value.
+
+So far we have been asking the script to find out the country with the highest life expectancy in 2002 only from gapminder.txt. What if you want to know more? What if you want to know any highest or lowest value from any column for any country for any year from any file? We can use variables to make it do what we want.
+
+MyFirstScript_Good.sh
+#!/bin/bash
+ #usage: sh MyFirstScript_Good.sh $inputFile $column $year $outputfile  (provide the filename column number year and the outputfile name in the terminal after typing sh MyFirstScript_Good.sh)
+ 
+inputFile=$1                #special variable that stores the the first argument from the command line 
+column=$2        # $2, $3, $4 store values from 2-4 command line arguments 
+year=$3 
+outputfile=$4  
+cut -f1,3,$column $inputFile | grep $year | sort -n -k3 | tail -n 1 > $outputfile
+
+You can sort in reverse order using sort -r
+
+#############################################
+Day 2, Morning Session 1: Python Programming
+#############################################
+
+
+Please have workshop website open:
+
+https://annawilliford.github.io/2018-02-24-UTA/
+
+Follow the link to etherpad provided under Schedule section ( to this page) - everything we type here is visible to all participants of the workshop
+
+Good Morning, 
+
+Before we begin, let us try and install plotnine.
+
+Type the following command in Terminal / git bash:
+
+conda install -c conda-forge plotnine
+
+
+Green - 
+
+
+
+#This is LifeExpPlot.py  # Importing packages 
+
+import pandas as pd 
+import matplotlib.pyplot as plt  
+# Reading file
+my_file = pd.read_table("gapminder.txt")  
+#Subsetting  
+Canada = my_file.loc[my_file['country']=="Canada", :] 
+# Plotting 
+Canada.plot.line(x="year",y="lifeExp", label = "Life Expectancy", figsize=(8,6)) 
+plt.suptitle("Life Expectancy in Canada over the years", fontsize = 20) 
+plt.xlabel("Year", fontsize = 16) 
+plt.ylabel("Life Expectancy", fontsize = 16) 
+plt.savefig("PlotLifeExp.png")
+
+
+
+====================
+
+To get python and jupyter notebook to work from gitbash:
+From whereever you are, type:
+cd
+npp .bashrc
+
+Add this line at the end of the file:
+export PATH=$PATH:"C:\Users\<windows user name>\Anaconda3"
+export PATH=$PATH:"C:\Users\<windows user name>\Anaconda3\Scripts"
+Save and close.
+
+Note: if this does not work, check the path to Anaconda3 folder
+and replace "C:\Users\<windows user name>\Anaconda3" with a correct path.
+This provides path to python.exe that MUST BE inside Anaconda3 folder (installed there by default during Anaconda installation)
+"C:\Users\<windows user name>\Anaconda3\Scripts" should provide path to jupyter-notebook.exe
+
+Start a new gitbash window for changes to take effect
+
+====================
+
+
+#defining functions in Jupyter
+
+#defining the function
+def degree_faren():   
+     # f = (c*9/5)+32    
+     f=(22*9/5)+32    
+     print(f)  
+
+#calling the function
+degree_faren()
+
+#defining an argument for a function (allows for more flexibility in your code)
+def degree_faren(c):    
+    f = (c*9/5)+32   
+     #f=(22*9/5)+32    
+     print(f)
+
+#call function with user defined argument
+degree_faren(5505)
+
+#using return instead of print()
+def degree_faren(c):   
+     f = (c*9/5)+32   
+      #f=(22*9/5)+32    
+      return f
+
+#assign output of function to variable
+faren = degree_faren(30)
+
+#multiply that variable by 10
+faren = faren*10
+
+#view output two ways
+print(faren)
+faren
+
+
+CHALLENGE :
+
+Write a function to  add two number and return the answer
+sum(x, y)
+def add_two_numbers(x,y):    
+    return x + y
+answer=add_two_numbers(1,2)
+print(answer)
+
+def plot_country(country):    
+    country.plot.line(x="year",y="lifeExp", label = "Life Expectancy", figsize=(8,6))     
+    plt.suptitle("Life Expectancy in Canada over the years", fontsize = 20)     
+	plt.xlabel("Year", fontsize = 16)     
+	plt.ylabel("Life Expectancy", fontsize = 16)     
+	plt.savefig("PlotLifeExp.png")    
+	plt.show()
+	
+def get_country(country_name):    
+    country = my_file.loc[my_file['country']==country_name, :]     
+    return country
+
+country_table = get_country('India')
+plot_country(country_table)
+
+#############################################
+Day 2, Morning Session 2: Data Visualization with Python plotnine
+#############################################
+
+-------
+import pandas as pd 
+import plotnine 
+from plotnine import *
+
+(ggplot(my_file) + aes(x='gdpPercap', y='lifeExp') + geom_point())
+http://ggplot.yhathq.com/how-it-works.html
+
+-----
+
+countries = my_file[my_file.country.str.startswith('A') |                    my_file.country.str.startswith('Z')]
+
+
+(ggplot(countries) + aes(x='year', y='lifeExp', color='continent') +   geom_line() + facet_wrap('country') )
+
+(ggplot(countries) + aes(x='gdpPercap', y='lifeExp', size='pop',                          color='continent') +   geom_point() )
+
+
+
+#############################################
+Day 2, Afternoon Session 1: Writing Reports w/ Jupyter Notebook
+Anna Williford
+#############################################
+
+http://assemble.io/docs/Cheatsheet-Markdown.html
+http://jupyter-notebook.readthedocs.io/en/stable/examples/Notebook/Working%20With%20Markdown%20Cells.html
+
+https://www.dropbox.com/s/81pc6zdr6qftvkp/GDP_report_Africa_Americas.ipynb?dl=0
+###################################################################################
+
+
+HTML code for a hyperlink
+<a href='$URL'>words you click on </a>  
+
+
+
+
+#############################################
+Day 2, Afternoon Session 2: Version control with Git/Github
+#############################################
+
+Peace's Git Novice URL: https://pow123.github.io/git-novice/
+
+
+CHALLENGE #1 (See 3A at above link)
+Along with tracking information for your Thesis (the project we have already created), say one would also like to track > information about each chapter. Despite a collaborator’s concerns, you create a Ch1 project inside your Thesis project with the following sequence of commands:
+
+$ cd             # return to home directory
+$ cd Thesis    # go into Thesis directory, which is already a Git repository
+$ ls -a          # ensure the .git sub-directory is still present in the Thesis directory
+$ mkdir Ch1    # make a sub-directory Thesis/Ch1
+$ cd Ch1       # go into Ch1 sub-directory
+$ git init       # make the Ch1 sub-directory a Git repository
+$ ls -a          # ensure the .git sub-directory is present indicating we have created a new Git repository
+
+Is the git init command, run inside the Ch1 sub-directory, required for tracking files stored in the Ch1 sub-directory?
+
+GitHub Education Pack - LOTS of FREE or reduced price developer's tools: https://education.github.com/pack   provides UNLIMITED GitHub private repositories while you're a student
+
+All workshop lessons are available for you after the workshop. If you created a GitHub account, you can copy(fork) this 
+repository to your account by following this link and clicking on `fork` button at the top right corner
+Repository to fork: https://github.com/AnnaWilliford/SWC_Spring2018_lessons
+
+
+

@@ -1,0 +1,226 @@
+Daren Card - Instructor:09:08 Please type your name/alias next to a color above (^^^) to use this Etherpad. It helps us identify you when we answer questions.
+
+Daren Card - Instructor:09:09 You can use this chat panel to ask any quick questions you have during the workshop. We will be able to answer them if you raise your hand, but only to a point because we have to keep the workshop moving and we can easily get off task with interesting questions.
+
+Jason L.:09:39 what is the folder name?
+
+Mr. Robot:09:39 SWC_spring2018
+
+Mr. Robot:09:39 That is the name to assign to the new folder.
+
+Mr. Robot:10:08 What did he click to open the Jupyter Notebook?
+
+Jason L.:10:09 Anaconda Prompt
+
+Jason L.:10:09 jupyter notebook should open it up in a web page
+
+Mr. Robot:10:10 I meant from the web interface, but I figured it out, thank you.
+
+Mr. Robot:10:22 When opening the python interpreter in the shell or command line make sure to type `python3` if you have both Python 2 and Python 3 installed.
+
+Neha :10:24 what's the difference in using markdown for getting the welcome text and using print function for getting welcome text?
+
+Mr. Robot:10:25 When you type "# Welcome All" go to the top menu bar and switch that line from "code" to "markdown" and *then* press Shift+Enter
+
+Wayde Wilson:10:25 It doesnt work on Git Bash, but I can do this function on Python. Does this mean that my Gitbash is not set up correctly?
+
+Mr. Robot:10:26 Wayde: did you open the python interpreter in gitbash before typing in the python functions?
+
+Chris Boolean:10:26 How do we get the Python interpretter in gitbash?
+
+Wayde Wilson:10:26 I did not Mr. Robot. Is that a command?
+
+Wayde Wilson:10:27 Or do I download it?
+
+Mr. Robot:10:27 Try this: Open GitBash and then type "python3" and press enter
+
+Mr. Robot:10:27 My Windows skills are a little rusty.
+
+Jason L.:10:28 I had to run the python script out of my Anaconda Command Prompt (Windows User)
+
+Wayde Wilson:10:28 Mr. Robot, did not work.
+
+Mr. Robot:10:29 Wayde: Try running the commands from the Anaconda prompt instead of gitbash, my bad.
+
+Wayde Wilson:10:29 It does work in Anaconda. Thank you.
+
+Mr. Robot:10:29 NP
+
+Mr. Robot:10:33 Chris B: Did you find an answer to your question?
+
+Chris Boolean:10:34 Not for the gitbash, but Anaconda works fine so I guess I'll just work from there
+
+Wayde Wilson:10:35 Chris Biggins: Same here
+
+Mr. Robot:10:35 Earlier I misspoke, I don't think you run the python interpreter from Gitbash, but check with one of the event organizers to verify.
+
+Mr. Robot:10:35 Gitbash is for version control of your projects.
+
+Daren Card - Instructor:10:35 @Neha it doesn't look like your question was answered. Running a python command to print something (like "welcome!") actually executes python and reports its output. When using Markdown (e.g., # Welcome!), you are using a special non-python syntax for rendering text in a "marked down" format (another example of this is HTML, which has much more complex syntax)
+
+Shadek:10:40 mass 109.24999999999999 height 44.5 age 102
+
+unnamed:10:40 109.24999999999999; 102; 44.5
+
+Imelda:10:41 mass=109.24999999999999
+
+Imelda:10:41 age=102
+
+Imelda:10:42 height=44.5
+
+Jason L.:10:42 You can call all those variables into a single print line: print(mass, height, age)
+
+M:10:42 age 102, height 44.5, mass 109.2499999999999
+
+Neha :10:42 @Daren then what's the significance of using non python text?
+
+Prince:10:42 height = 44.5, age = 102, mass = 109.2499999
+
+Mr. Robot:10:43 Neha: if you're talking about the "# Welcome All" statement in the jupyter notebook, that's just for formatting and presentation
+
+Mr. Robot:10:43 It doesn't serve a functional purpose with regard to the program, just to make it more presentable and readable for someone else who may read your code.
+
+Daren Card - Instructor:10:43 @Neha. It helps with creating a narrative when using a Jupyter notebook. Think of it like a notebook keeping track of an analysis. It is cleaner than having a bunch of code blocks describing each step you are doing in human language instead of code.
+
+Daren Card - Instructor:10:44 You don't have to use it, but many prefer it. You'll see this more in practice by the end of the workshop and maybe it will make more sense then.
+
+Daren Card - Instructor:10:46 Here is an example of a combination of code (in this case Bash) and Markdown that I made to outline a task I perform in my research: https://gist.github.com/darencard/72ddd9e6c08aaff5ff64ca512a04a6dd
+
+EM:10:52 is import a function? why doesn't it have parentheses?
+
+Mr. Robot:10:53 import is a reserved word called an expression
+
+Noor:11:00 where is the challenge ?
+
+Noor:11:01 where is the challenge ?
+
+Jason L.:11:14 Is there a hotkey for new cell creation in the jupyter notebook?
+
+Mr. Robot:11:15 Jason: I don't see a hotkey other than File>New Notebook>Python 3
+
+Mr. Robot:11:16 EM: I asked for some clarification online regarding the difference between reserved words (eg import) and functions (eg print())
+
+Mr. Robot:11:17 On difference is that functions can nest, whereas reserved words are expressions that cannot be nested, eg print(math.sqrt(x)) is valid, however "import <module name> return value_x" is not
+
+Mr. Robot:11:18 also, functions can be renamed or defined by the user, but something like import is reserved by the interpeter and cannot be changed or redefined
+
+Mr. Robot:11:18 import is an instruction for the compiler and not a function, and is therefore not an object, whereas functions *are* objects
+
+Daren Card - Instructor:11:19 @Jason L: I think they have made a shortcut for everything you can possibly do in a Jupyter notebook, so you never have to use a mouse. Just gotta memorize them. Here is an overview that I think will answer you question, but note that there are many more options. https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/
+
+Daren Card - Instructor:11:20 Can also go to Help and Keyboard Shortcuts to see some
+
+Mr. Robot:11:22 Lots of good shortcuts and hotkeys there, but I don't see anything to open a new notebook other than `duplicate notebook` @Jason L
+
+Jason L.:11:23 @Mr. Robot Oh just the new cell below. I haven't had a chance to look yet but I'm gonna save that link to my favs for reference.
+
+Daren Card - Instructor:11:24 Yes, the link should answer your question. And can Google further. There is tons of info on there on this stuff.
+
+Neha :11:24 is list data structure or array?
+
+Mr. Robot:11:24 Neha: it is both, in a sense
+
+Mr. Robot:11:24 it is an array, but it is not restricted by data type
+
+Mr. Robot:11:25 eg, in a single list you can have indexes/elements containing strings, ints, floats, or even other lists!
+
+Neha :11:25 got it
+
+Mr. Robot:11:25 ::thumbs up::
+
+EM:11:31 can you change a tuple to a list?
+
+Shadek:11:32 use list(tuple)
+
+EM:11:36 how to write comments that are more than one line?
+
+Mr. Robot:11:41 EM: use triple quotes
+
+Mr. Robot:11:41 '''
+
+Mr. Robot:11:41 this is a multiline quote
+
+Mr. Robot:11:41 '''
+
+Mr. Robot:11:42 you can use " x3 or ' x3, but the groups of three must be the same type, eg ''' multiline comment ''' or """ multiline comment """
+
+Mr. Robot:11:42 I will type some examples in the notes area to the right.
+
+Imelda:12:56 Task 3.1) 1.- lifeExp	gdpPercap
+
+Brian:13:35 Syntax for saving a graphical image
+
+Daren Card - Instructor:13:37 You can use 'savefig' to save the active figure. See https://stackoverflow.com/questions/9622163/save-plot-to-image-file-instead-of-displaying-it-using-matplotlib
+
+Mr. Robot:13:56 Imelda: Remember the third and fifth column are index 2 and 4 respectively, so they should be 'year' and 'pop'
+
+Imelda:14:01 Thanks Mr Robot
+
+Neha :14:01 what do you exactly mean by shell?
+
+Mr. Robot:14:11 Neha: shell is another slang term for the terminal
+
+Mr. Robot:14:12 also, command line/command line interface or CLI, also 'console' is sometimes used
+
+Noor:14:15 cd Desktop/SWC_spring2018/
+
+Farah- Instructor:16:21 Sorry to run at 150mph in the beginning ! :P
+
+Noor:16:27 82.603
+
+Farah- Instructor:16:29 mph? only? :P
+
+Ugh:16:36 is it possible to sort from highest to lowest and then find head -n 1 to get the answer?
+
+Mr. Robot:16:38 unnamed: yes, use flag -r with the command sort to reverse the results
+
+Mr. Robot:16:38 cut -f1,3,4 gapminder.txt | grep 2002 | sort -nrk3 | head -n 1 > CountryHighestLifeExp.txt
+
+Mr. Robot:16:39 try that ^
+
+Ugh:16:39 sort -n -r -k3
+
+Ugh:16:40 ok thannks
+
+Noor:16:45 can you help me flip this
+
+Noor:16:45 geol117865:unix_shell alwachin$ cut -f1,3,4 gapminder.txt | grep -v "lifeExp",2002 | sort -k3 | tail -n 2 > CountryHighestLifeExp.txt geol117865:unix_shell alwachin$ cat CountryHighestLifeExp.txt Japan	2007	82.603 country	year lifeExp
+
+Mr. Robot:16:46 you can group flags together, eg -n -r -k3 becomes -nrk3
+
+Mr. Robot:16:47 Noor: add the flag -r to your sort command, like this:
+
+Mr. Robot:16:47 cut -f1,3,4 gapminder.txt | grep -v "lifeExp",2002 | sort -rk3 | tail -n 2 > CountryHighestLifeExp.txt
+
+Noor:16:47 no im getting the header with highest but upsdie down
+
+Mr. Robot:16:48 Oops, that didn't work
+
+Mr. Robot:16:48 hold on
+
+Noor:16:48 no still
+
+Noor:16:48 Japan	2007	82.603 country	year	lifeExp
+
+Who Am I:16:49 https://www.dropbox.com/s/axb4n7b2zwix1ob/SWC_spring2018_linux2.txt?dl=0
+
+Noor:16:54 i did it
+
+Noor:16:54 cut -f1,3,4 gapminder.txt | grep -v "lifeExp",2002 | sort -rk3 | head -n 2 > CountryHighestLifeExp.txt
+
+Mr. Robot:16:55 Nice, I had a hard time figuring it out
+
+Noor:16:55 haha thanks any way
+
+M:16:55 good job noor wow
+
+Farah- Instructor:17:42 Gonna paste it all on etherpad and the history is gonna be on the dropbox link as well
+
+Mr. Robot:09:22 *beep* *boop* I'm a robot
+
+Noor:12:19 http://ggplot.yhathq.com/how-it-works.html
+
+Daren Card - Instructor:14:30 @Noor. Good find. That site gives a nice overview of ggplot. Though note that it is based on a different Python module. We are using 'plotnine', which is newer and much better.
+
+Daren Card - Instructor:14:33 ggplot actually originated in R and is more developed in that language. plotnine is a "port" of ggplot into Python, where port means that someone tried to translate it from one language to another. The syntax between ggplot2 in R and plotnine in Python is very simillar, so if you learn one you can probably work with the other with some subtle changes. If you want an overview of ggplot2 in R see http://r-statistics.co/Complete-Ggplot2-Tutorial-Part1-With-R-Code.html. You can probably run many of the same commands in Python plotnine
+

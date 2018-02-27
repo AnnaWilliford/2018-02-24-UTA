@@ -197,7 +197,14 @@ and our administrator may contact you if we need any extra information.</h4>
   to match your plans.  You may also want to change 'Day 1' and 'Day
   2' to be actual dates or days of the week.
 {% endcomment %}
+
+
 <h2 id="schedule">Schedule</h2>
+<p> 
+<strong>Lessons:</strong> Our lessons are available <a href="https://github.com/AnnaWilliford/SWC_Spring2018_lessons"> here </a>
+</p>
+
+
 
 {% comment %} DO NOT EDIT SURVEY LINKS {% endcomment %}
 <!--
@@ -236,6 +243,7 @@ and our administrator may contact you if we need any extra information.</h4>
 {% if page.collaborative_notes %}
 <p id="collaborative_notes">
   We will use <a href="{{page.collaborative_notes}}">etherpad</a> for chatting, taking notes, and sharing URLs and bits of code.
+  Saved latest version of Etherpad (after the workshop) is <a href="workshop/etherpad_chat.txt"> here (etherpad chat)</a> <a href="workshop/etherpad_notes.txt"> and here (etherpad notes)</a> 
 </p>
 {% endif %}
 
