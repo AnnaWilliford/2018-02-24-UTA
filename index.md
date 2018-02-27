@@ -243,7 +243,8 @@ and our administrator may contact you if we need any extra information.</h4>
 {% if page.collaborative_notes %}
 <p id="collaborative_notes">
   We will use <a href="{{page.collaborative_notes}}">etherpad</a> for chatting, taking notes, and sharing URLs and bits of code.<br>
-  Saved latest version of Etherpad (after the workshop) is <a href="workshop/etherpad_chat.txt"> here (etherpad chat)</a> <a href="workshop/etherpad_notes.txt"> and here (etherpad notes)</a> 
+  Saved latest version of Etherpad (after the workshop): <a href="workshop/etherpad_notes.txt"> etherpad notes</a> <br>
+                                                         <a href="workshop/etherpad_chat.txt"> etherpad chat</a>
 </p>
 {% endif %}
 
