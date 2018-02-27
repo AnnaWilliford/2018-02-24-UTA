@@ -214,6 +214,9 @@ and our administrator may contact you if we need any extra information.</h4>
 <h2 id="schedule">Schedule</h2>
 
 
+<p> 
+<strong>Lessons:</strong> Our lessons are based on <a href="http://software-carpentry.org/lessons/"> lessons developed by Software Carpentry Foundation</a>
+</p>
 
 {% comment %} DO NOT EDIT SURVEY LINKS {% endcomment %}
 <!--
