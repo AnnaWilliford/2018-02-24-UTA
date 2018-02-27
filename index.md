@@ -38,11 +38,11 @@ eventbrite: "42956470961"          # optional: alphanumeric key for Eventbrite r
   displayed if the 'eventbrite' field in the header is not set.
 {% endcomment %}
 
-### Thank you for attending the workshop!
+<h2 id="general">Thank you for attending the workshop!</h2>
 
 We hope these records from the workshop will encourage you to learn more about Python, Linux and Git/GitHub!
 <p> 
-<strong>Lessons:</strong>  <a href="https://github.com/AnnaWilliford/SWC_Spring2018_lessons"> View workshop lessons </a>
+<strong>Lessons:</strong>  <a href="https://github.com/AnnaWilliford/SWC_Spring2018_lessons"> View workshop lessons </a> <br>
 <strong>Etherpad:</strong> <a href="Workshop/etherpad_notes.txt"> etherpad notes</a>, <a href="Workshop/etherpad_chat.txt"> etherpad chat</a>
 </p>
 
